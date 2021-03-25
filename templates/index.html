@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type= "text/css" href="{{url_for('static', filename ='main.css')}}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Geocoder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Geocoder</h1>
+        <h3>Please type your coordinates below.</h3>
+        <h4>Coordinates range from -90 to 90 for latitude and -180 to 180 for longitude.<br>
+        London for example is 51.5 and -0.08</h4>
+        <form action="{{url_for('map')}}" method="POST" enctype="multipart/form-data">
+            <input style="width: 7em" type="number" step="any" title="Latitude" placeholder="Latitude" min="-90" max="90" name="Latitude" required><br>
+            <input style="width: 7em" type="number" step="any" title="Longitude" placeholder="Longitude" min="-180" max="180" name="Longitude" required> <br>
+            <button type="submit"> Submit </button>
+        </form>
+    </div>
+</body>
+</html>
